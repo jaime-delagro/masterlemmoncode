@@ -1,0 +1,34 @@
+
+@function getPalette($color, $x) {
+    @if ( $x < 5) {
+        @return darken($color, (5 - $x)*10%);
+    } @else if ( $x == 5 ) {
+        @return $color;
+    } @else {
+        @return lighten($color, ($x - 5)*10%);
+    }
+}
+
+div {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 80px;
+    margin: 2px;
+}
+
+@for $i from 1 through 9
+{
+    .blue_palette div:nth-child(#{$i}) {
+        background: getPalette(blue, $i);
+    }
+
+    .red_palette div:nth-child(#{$i}) {
+        background: getPalette(red, $i);
+    }
+
+    .green_palette div:nth-child(#{$i}) {
+        background: getPalette(green, $i);
+    }
+}
+
+
