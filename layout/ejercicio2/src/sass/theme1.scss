@@ -1,0 +1,39 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'http://fonts.googleapis.com/css?family=Share:400,700';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+
+@mixin default_font() {
+    font-family: cursive, sans-serif;
+}
+
+@mixin principal_font() {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+@mixin secondary_font() {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+@mixin box() {
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+@mixin base_div() {
+    background: red;
+}
+
+@mixin important_div() {
+    background: maroon;
+}
+
+@mixin warning_div() {
+    background: lightcoral;
+}
+
+@mixin shadow_div() {
+    box-shadow: -10px 10px 8px #363636;
+}

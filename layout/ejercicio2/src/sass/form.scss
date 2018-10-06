@@ -1,0 +1,50 @@
+
+@import "theme1.scss";
+//@import "theme2.scss";
+
+div {
+    display: block;
+    line-height: 40px;
+    width: 120px;
+    margin: 2px;
+    padding: 10px;
+    padding-left: 20px;
+    height: 60px;
+}
+
+p {
+    padding-left: 2px;
+}
+
+.default_font {
+    @include default_font;
+}
+
+.principal_font {
+    @include principal_font;
+}
+
+.secondary_font {
+    @include secondary_font;
+}
+
+.box {
+    @include box;
+}
+
+.base_div {
+    @include base_div;
+}
+
+.important_div {
+    @include important_div;
+}
+
+.warning_div {
+    @include warning_div;
+}
+
+.shadow_div {
+    @include shadow_div;
+    line-height: 25px;
+}

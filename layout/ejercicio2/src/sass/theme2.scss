@@ -1,0 +1,40 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'http://fonts.googleapis.com/css?family=Share:400,700';
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700s';
+
+@mixin default_font() {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@mixin principal_font() {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+@mixin secondary_font() {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+@mixin box() {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+@mixin base_div() {
+    background: blue;
+}
+
+@mixin important_div() {
+    background: darkblue;
+}
+
+@mixin warning_div() {
+    background: lightseagreen;
+}
+
+@mixin shadow_div() {
+    box-shadow: 10px 10px 8px #363636;
+}
