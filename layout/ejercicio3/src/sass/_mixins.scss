@@ -1,0 +1,20 @@
+@mixin calculate-columns($numberOfColumns: 1) {
+    @for $colNumber from 1 through $numberOfColumns {
+        .col-#{$colNumber} {
+            min-width: wrap-content;
+            width: (round(100% / $numberOfColumns) - 1%);
+        }
+    }
+}
+
+@mixin hide-nav($colNumber: 1) {
+    .nav-#{$colNumber} {
+        visibility: hidden;
+    }
+}
+
+@mixin show-nav($colNumber: 1) {
+    .nav-#{$colNumber} {
+        visibility: visible
+    }
+}
