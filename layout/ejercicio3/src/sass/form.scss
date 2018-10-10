@@ -13,30 +13,47 @@ body {
 
 .section {
     text-align: justify;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 [class^='nav-'] {
-    display: inline-block;
+    float: left;
+    width: 33.33%;
+}
+
+.nav-2 {
+    text-align: center;
+}
+
+.nav-3 {
+    text-align: right;
 }
 
 [class^='col-'] {
     background: white;
     border: solid 1px black;
     margin: 0 auto;
-    display: inline-block;
+    float: left;
+    text-align: center;
 }
 
-@media (min-width: 0px) {
+@media screen and (max-width: 500px) {
     @include hide-nav(2);
-    @include calculate-columns(7);
+    @include calculate-columns(1);
+
+    .flex-container div.section:nth-child(2) {
+        margin-top: auto;
+    }
 }
 
-/*@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
     @include show-nav(2);
-    @include calculate-columns(7);
-}*/
+    @include calculate-columns(5);
+}
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
     @include show-nav(2);
     @include calculate-columns(7);
 }
@@ -46,6 +63,7 @@ div.flex-container {
     padding: 0;
     display: flex;
     flex-direction: column;
+    flex-flow: column wrap;
     align-items: baseline;
     min-height: 100%;
     height: 100%;
@@ -59,5 +77,5 @@ div.flex-container {
 .flex-container div.section:nth-child(2) {
     background-color: lightgray;
     width: 100%;
-    //align-self: flex-end;
+    align-self: flex-end;
 }

@@ -1,8 +1,9 @@
 @mixin calculate-columns($numberOfColumns: 1) {
     @for $colNumber from 1 through $numberOfColumns {
         .col-#{$colNumber} {
-            min-width: wrap-content;
-            width: (round(100% / $numberOfColumns) - 1%);
+            flex: $numberOfColumns 0%;
+            min-width: auto;
+            max-width: (round(100% / $numberOfColumns));
         }
     }
 }
