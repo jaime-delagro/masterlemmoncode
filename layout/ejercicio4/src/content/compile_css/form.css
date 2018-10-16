@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%; }
+
+.main-display {
+  flex-grow: 1; }
+
+.block1 {
+  background-color: lightpink; }
+
+.block2 {
+  background-color: yellow; }
+
+.block3 {
+  background-color: blue; }
+
+@media screen and (min-width: 95rem) {
+  .container {
+    display: grid;
+    /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+    min-height: 100%;
+    grid-template-columns: 5vh 1fr 2fr 5vh;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas: ". side-bar content-1 ." ". side-bar content-2 .";
+    grid-template-columns: 20vh 1fr 2fr 20vh;
+    grid-template-rows: 50vh 50vh; }
+    .container .block1 {
+      display: grid;
+      /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+      grid-template-rows: auto auto auto;
+      align-items: center;
+      grid-area: side-bar; }
+    .container .block2 {
+      grid-area: content-1; }
+    .container .block3 {
+      grid-area: content-2; } }
+
+@media screen and (max-width: 94.9rem) and (min-width: 75rem) {
+  .container {
+    display: grid;
+    /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+    min-height: 100%;
+    grid-template-columns: 5vh 1fr 2fr 5vh;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas: ". side-bar content-1 ." ". side-bar content-2 ."; }
+    .container .block1 {
+      display: grid;
+      /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+      grid-template-rows: auto auto auto;
+      align-items: center;
+      grid-area: side-bar; }
+    .container .block2 {
+      grid-area: content-1; }
+    .container .block3 {
+      grid-area: content-2; } }
+
+@media screen and (max-width: 74.9rem) and (min-width: 48rem) {
+  .container {
+    display: grid;
+    /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+    min-height: 100%;
+    grid-template-rows: 14vh 43vh 43vh; }
+    .container .block1 {
+      display: grid;
+      /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+      grid-template-columns: auto auto auto;
+      justify-items: center;
+      align-items: center; } }
+
+@media screen and (max-width: 47.9rem) {
+  .container {
+    display: grid;
+    /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+    min-height: 100%;
+    grid-template-rows: auto 50vh 50vh; }
+    .container .block1 {
+      display: grid;
+      /*grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;*/
+      grid-template-columns: auto auto auto 1fr;
+      grid-column-gap: 0.5rem; } }

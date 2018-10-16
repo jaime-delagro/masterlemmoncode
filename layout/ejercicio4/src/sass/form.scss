@@ -1,0 +1,50 @@
+@import "reset.scss";
+@import "mixins.scss";
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-display {
+    flex-grow: 1;
+}
+
+.block1 {
+    background-color: lightpink;
+}
+
+.block2 {
+    background-color: yellow;
+}
+
+.block3 {
+    background-color: blue;
+}
+
+@media screen and (min-width: 95rem) {
+    .container {
+        @include full-resolution;
+    }
+}
+
+@media screen and (max-width: 94.9rem) and (min-width: 75rem) {
+    .container {
+        @include large-resolution;
+    }
+}
+
+@media screen and (max-width: 74.9rem) and (min-width: 48rem) {
+    .container {
+        @include medium-resolution;
+    }
+}
+
+@media screen and (max-width: 47.9rem) {
+    .container {
+        @include small-resolution;
+    }
+}
