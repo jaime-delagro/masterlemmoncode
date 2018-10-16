@@ -1,2 +1,6 @@
 node_modules
 .vscode
+/layout/ejercicio1/package-lock.json
+/layout/ejercicio3/package-lock.json
+/layout/ejercicio2/package-lock.json
+/layout/ejercicio4/package-lock.json
